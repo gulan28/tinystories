@@ -5,6 +5,7 @@ import {Container, Col, Row, Stack, Form, Button} from 'react-bootstrap';
 import Footer from './components/Footer'
 import './App.css'
 
+
 function App() {
   // Create a reference to the worker object.
   const worker = useRef(null);
@@ -64,7 +65,7 @@ function App() {
 
         case 'complete':
           // Generation complete: re-enable the "Translate" button
-          console.log("Generation is complete COmplete");
+          console.log("Generation complete");
           setDisabled(false);
           break;
       }
@@ -96,11 +97,11 @@ function App() {
         <Col md={{span: 6, offset: 3}}>
           <Stack gap={3}>
             <Form>
-              <Form.Group class="mb-3">
+              <Form.Group className="mb-3">
                 <Form.Label>Prompt</Form.Label>
                 <Form.Control placeholder="I walked my dog" value={input} onChange={e => setInput(e.target.value)} />
               </Form.Group>
-              <Form.Group class="mb-3">
+              <Form.Group className="mb-3">
               <Form.Label>Completion</Form.Label>
                 <Form.Control as="textarea" rows={10} value={output} readOnly/>
               </Form.Group>

@@ -1,4 +1,10 @@
 import { pipeline } from '@xenova/transformers';
+import * as Sentry from "@sentry/react";
+
+Sentry.init({
+  dsn: "https://cc2061293a464db2ae188bfd60d3213e@o4505275499806720.ingest.sentry.io/4505275563180032",
+});
+
 
 class GenerationPipeline {
   static task = 'text-generation';
